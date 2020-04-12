@@ -32,6 +32,17 @@ function setzePosZeiger () {
     tempY = scene.screenHeight() - 10 - _aktuelleY * 20
     _posZeiger.setPosition(tempX, tempY)
 }
+controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (controller.left.isPressed() && _aktuelleX > 0) {
+        _aktuelleX += -1
+        setzePosZeiger()
+    } else {
+        if (controller.right.isPressed() && _aktuelleX < 3) {
+            _aktuelleX += 1
+            setzePosZeiger()
+        }
+    }
+})
 function setupSpiel () {
     scene.setBackgroundColor(1)
     _aktuelleX = 0
