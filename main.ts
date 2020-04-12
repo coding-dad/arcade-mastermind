@@ -33,7 +33,7 @@ controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
         tempVal = _spriteReiheWerte[_aktuelleX]
         tempVal -= 1
         if (tempVal < 1) {
-            tempVal = 1
+            tempVal = _FarbPins.length -1
         }
         _spriteReiheWerte[_aktuelleX] = tempVal
         setzeFarbe(_aktuelleX, tempVal)
@@ -67,7 +67,7 @@ function setupSpiel () {
         b . . . . f f f f f f . . . . b
         b . . . . . . . . . . . . . . b
         b b b b b b b b b b b b b b b b
-   `, img`
+    `,img`
         b b b b b b b b b b b b b b b b
         b . . . . . . . . . . . . . . b
         b . . . . f f f f f f . . . . b
@@ -84,7 +84,7 @@ function setupSpiel () {
         b . . . . f f f f f f . . . . b
         b . . . . . . . . . . . . . . b
         b b b b b b b b b b b b b b b b
-   `, img`
+    `,img`
         b b b b b b b b b b b b b b b b
         b . . . . . . . . . . . . . . b
         b . . . . f f f f f f . . . . b
@@ -101,7 +101,7 @@ function setupSpiel () {
         b . . . . f f f f f f . . . . b
         b . . . . . . . . . . . . . . b
         b b b b b b b b b b b b b b b b
-   `, img`
+    `,img`
         b b b b b b b b b b b b b b b b
         b . . . . . . . . . . . . . . b
         b . . . . f f f f f f . . . . b
@@ -118,7 +118,7 @@ function setupSpiel () {
         b . . . . f f f f f f . . . . b
         b . . . . . . . . . . . . . . b
         b b b b b b b b b b b b b b b b
-   `, img`
+    `,img`
         b b b b b b b b b b b b b b b b
         b . . . . . . . . . . . . . . b
         b . . . . f f f f f f . . . . b
